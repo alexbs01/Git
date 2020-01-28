@@ -66,12 +66,31 @@ Y para ver si se configuró correctamente ejecutaremos el siguiente comando que 
 ~$ git config --list --show-origin
 ```
 
-## #4 Como crear un nuevo repositorio en GitHub
+## #4 Poner una clave SSH
+
+Generaremos una clave ssh con el comando, iniciamos el agente y agregamos la clave privada SSH al ssh-agent:   
+
+```sh
+~$ ssh-keygen -t rsa -b 4096 -C "EMailQuePusisteEnGitHub"
+~$ eval "$(ssh-agent -s)"
+~$ ssh-add ~/.ssh/id_rsa
+```
+
+Y ahora instalamos el xclip para copiar la clave pública SSH.  
+
+```sh
+~$ sudo apt instal xclip
+~$ xclip -sel clip < ~/.ssh/id_rda.pub
+```
+
+Ahora copiamos la clave que nos aparece y nos dirigiremos a al apartado de "Settings" que está en nuestro icono de GitHub. Buscamos el punto en el que pone "SSH and GPG keys", y le damos al "New SSH key", pegaremos la clave que copiamos anteriormente y pondremos un título para identificarla.  
+
+## #5 Como crear un nuevo repositorio en GitHub
 
 Iniciamos sesión en GitHub y arriba a la derecha nos aparecerá una campana, un símbolo más con un triángulo y nuestra foto de perfil. Pulsaremos en el más y crearemos un nuevo repositorio entrando en "New repository".  
 Rellenamos los campos, donde podremos escoger el nombre, ponerle una descripción y decidir si ese repositorio será público o privado.  
 
-## #5 Como crear un nuevo repositorio local
+## #6 Como crear un nuevo repositorio local
 
 En el primer paso creamos una carpeta, con el comando mkdir, que almacenará los repositorios que vayamos creando.  
 Así que ahora entramos en dicha carpeta usando el comando cd.  
@@ -99,7 +118,7 @@ A continuación, con la carpeta ya inicializada como repositorio, **crearemos un
 ~$ touch README.md
 ```
 
-## #6 Como crear un commit
+## #7 Como crear un commit
 
 Ahora para editar el nuevo archivo pondremos el comando:  
 
@@ -140,7 +159,7 @@ Con el comando **git commit** haremos una instantánea del trabajo que posterior
 ~$ git commit -m "NombreDelCommit"
 ```
 
-## #7 Subir el repositorio a GitHib
+## #8 Subir el repositorio a GitHib
 
 Después de hacer commit, si probamos a hacer el comando **git status** veremos que nos dice que no hay nada a que hacerle commit.  
 Ahora como lo que queremos es subirlo a GitHub lo que haremos es ir al repositorio que creamos anteriormente desde la página y copiaremos y pegaremos en la línea de comandos los dos últimos comandos, que son:  
@@ -156,73 +175,20 @@ Tras hacer estos dos comandos se subirá a GitHub el archivo que editamos anteri
 ~$ git push
 ```
 
+-----
 
+Si tenemos nuestra cuenta de GitHub en otro ordenador y subimos cosas desde ambos, la mejor forma de tener el proyecto en el otro ordenador es clonar el repositorio correspondiente.  
+Para esto iremos al repositorio que queremos clonar nos saldrá un rectángulo verde que pone "Clone or download", le daremos y copiaremos el link que aparece dentro.  
 
+```sh
+~$ cd projects
+~$ git clone "LinkQueAcabamosDeCopiar"
+```
 
+Ahora tenemos el repositorio en el local, ahora cada vez que queramos subir algo nuevo usaremos el comando de **git push**. Sin embargo a la hora de actualizar el repositorio local porque añadimos cosas nuevas desde otro ordenador, solo tendremos que usar el comando:  
 
+```sh
+~$ git pull
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Porque ya tendremos añadido ese repositorio en el local, **solo habrá que usar el comando git clone la primera vez que queramos tener un repositorio en un nuevo ordenador**.
