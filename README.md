@@ -1,5 +1,17 @@
 # Como instalar git desde Ubuntu
 
+## Índice
+
+- [#0 Explicación de como funciona git](##0-Explicación-de-como-funciona-git)
+- [#1 Creación de una carpeta](##1-Creación-de-una-carpeta)
+- [#2 Instalación de git](##2-Instalación-de-git)
+- [#3 Configuración del nombre, el email y el editor](##3 Configuración-del-nombre,-el email-y-el-editor)
+- [#4 Poner una clave SSH](##4-Poner-una-clave-SSH)
+- [#5 Como crear un nuevo repositorio en GitHub](##5-Como-crear-un-nuevo-repositorio-en-GitHub)
+- [#6 Como crear un nuevo repositorio local](##6-Como-crear-un-nuevo-repositorio-local)
+- [#7 Como crear un commit](##7-Como-crear-un-commit)
+- [#8 Subir el repositorio a GitHub](##8-Subir-el-repositorio-a-GitHub)
+
 ## #0 Explicación de como funciona git
 
 Git funciona con tres fases a nivel local y una fase a nivel remota o de red.  
@@ -140,7 +152,7 @@ Con el comando **git commit** haremos una instantánea del trabajo que posterior
 ~$ git commit -m "NombreDelCommit"
 ```
 
-## #7 Subir el repositorio a GitHib
+## #7 Subir el repositorio a GitHub
 
 Después de hacer commit, si probamos a hacer el comando **git status** veremos que nos dice que no hay nada a que hacerle commit.  
 Ahora como lo que queremos es subirlo a GitHub lo que haremos es ir al repositorio que creamos anteriormente desde la página y copiaremos y pegaremos en la línea de comandos los dos últimos comandos, que son:  
