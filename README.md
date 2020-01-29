@@ -5,7 +5,7 @@
 - [#0 Explicación de como funciona git](##0-Explicación-de-como-funciona-git)
 - [#1 Creación de una carpeta](##1-Creación-de-una-carpeta)
 - [#2 Instalación de git](##2-Instalación-de-git)
-- [#3 Configuración del nombre, el email y el editor](##3-Configuración-del-nombre-el email-y-el-editor)
+- [#3 Configuración del nombre, el email y el editor](##3-Configuración-del-nombre,-el email-y-el-editor)
 - [#4 Poner una clave SSH](##4-Poner-una-clave-SSH)
 - [#5 Como crear un nuevo repositorio en GitHub](##5-Como-crear-un-nuevo-repositorio-en-GitHub)
 - [#6 Como crear un nuevo repositorio local](##6-Como-crear-un-nuevo-repositorio-local)
