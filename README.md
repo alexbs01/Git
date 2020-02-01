@@ -171,11 +171,7 @@ Con el comando **git commit** haremos una instantánea del trabajo que posterior
 ~$ git commit -m "NombreDelCommit"
 ```
 
-<<<<<<< HEAD
-## #7 Subir el repositorio a GitHub
-=======
 ## #8 Subir el repositorio a GitHib
->>>>>>> fb98deb85fe274dff9f62d9b754b3ad92d0db6d6
 
 Después de hacer commit, si probamos a hacer el comando **git status** veremos que nos dice que no hay nada a que hacerle commit.  
 Ahora como lo que queremos es subirlo a GitHub lo que haremos es ir al repositorio que creamos anteriormente desde la página y copiaremos y pegaremos en la línea de comandos los dos últimos comandos, que son:  
