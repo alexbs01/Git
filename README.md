@@ -2,17 +2,17 @@
 
 ## Índice
 
-- [#0 Explicación de como funciona git](##0-Explicación-de-como-funciona-git)
-- [#1 Creación de una carpeta](##1-Creación-de-una-carpeta)
-- [#2 Instalación de git](##2-Instalación-de-git)
-- [#3 Configuración del nombre, el email y el editor](##3-Configuración-del-nombre,-el-email-y-el-editor)
+- [#0 Explicación de como funciona git](#Explicación-de-como-funciona-git)
+- [#1 Creación de una carpeta](#Creación-de-una-carpeta)
+- [#2 Instalación de git](#Instalación-de-git)
+- [#3 Configuración del nombre, el email y el editor](#Configuración-del-nombre,-el-email-y-el-editor)
 - [#4 Poner una clave SSH](##4-Poner-una-clave-SSH)
-- [#5 Como crear un nuevo repositorio en GitHub](##5-Como-crear-un-nuevo-repositorio-en-GitHub)
-- [#6 Como crear un nuevo repositorio local](##6-Como-crear-un-nuevo-repositorio-local)
-- [#7 Como crear un commit](##7-Como-crear-un-commit)
-- [#8 Subir el repositorio a GitHub](##8-Subir-el-repositorio-a-GitHub)
+- [#5 Como crear un nuevo repositorio en GitHub](#Como-crear-un-nuevo-repositorio-en-GitHub)
+- [#6 Como crear un nuevo repositorio local](#Como-crear-un-nuevo-repositorio-local)
+- [#7 Como crear un commit](#Como-crear-un-commit)
+- [#8 Subir el repositorio a GitHub](#Subir-el-repositorio-a-GitHub)
 
-## #0 Explicación de como funciona git
+## Explicación de como funciona git
 
 Git funciona con tres fases a nivel local y una fase a nivel remota o de red.  
 Cuando creamos un archivo y los modificamos en una carpeta inicializada como repositorio, estaremos situados en la primera fase, denominada "Working directory". Cualquier archivo que modifiquemos pasará automáticamente a este punto. Para pasar a la siguiente fase del desrrollo tendremos que usar el comando **git add** (1).  
@@ -23,7 +23,7 @@ working directory ===(1)===> staging area ===(2)===> loacal repo ===(3)===> Remo
 
 Para saber en que fase estamos, usaremos el comando **git status**.  
 
-## #1 Creación de una carpeta
+## Creación de una carpeta
 
 Comenzaremos creando una carpeta en la que se alojarán los futuros repositorios de git, para ello abriremos la consola de comandos con *Ctrl + Alt + T*, y primero veremos donde estamos situados.  
 
@@ -43,7 +43,7 @@ A continuación entraremos en este directorio.
 ~$ cd projects
 ```
 
-## #2 Instalación de git
+## Instalación de git
 
 Ahora instalaremos git con estos tres comandos.  
 
@@ -60,7 +60,7 @@ A continuación, para comprobar que se instaló correctamente usaremos un comand
 git version 2.24.1
 ```
 
-## #3 Configuración del nombre, el email y el editor
+## Configuración del nombre, el email y el editor
 
 Una vez tengamos instalado Git procederemos a configurar el nonmbre, el email y el editor. Para este paso lo mejor es que primero nos registremos en GitHub, para posteriormente, subir ahí los commits que vayamos creando, y además, para tener el mismo nombre en Git y en GitHub. Comenzaremos registrándonos y después escribiremos estos comandos.  
 
@@ -78,7 +78,7 @@ Y para ver si se configuró correctamente ejecutaremos el siguiente comando que 
 ~$ git config --list --show-origin
 ```
 
-## #4 Poner una clave SSH
+## Poner una clave SSH
 
 Generaremos una clave ssh con el comando, iniciamos el agente y agregamos la clave privada SSH al ssh-agent:   
 
@@ -97,12 +97,12 @@ Y ahora instalamos el xclip para copiar la clave pública SSH.
 
 Ahora copiamos la clave que nos aparece y nos dirigiremos a al apartado de "Settings" que está en nuestro icono de GitHub. Buscamos el punto en el que pone "SSH and GPG keys", y le damos al "New SSH key", pegaremos la clave que copiamos anteriormente y pondremos un título para identificarla.  
 
-## #5 Como crear un nuevo repositorio en GitHub
+## Como crear un nuevo repositorio en GitHub
 
 Iniciamos sesión en GitHub y arriba a la derecha nos aparecerá una campana, un símbolo más con un triángulo y nuestra foto de perfil. Pulsaremos en el más y crearemos un nuevo repositorio entrando en "New repository".  
 Rellenamos los campos, donde podremos escoger el nombre, ponerle una descripción y decidir si ese repositorio será público o privado.  
 
-## #6 Como crear un nuevo repositorio local
+## Como crear un nuevo repositorio local
 
 En el primer paso creamos una carpeta, con el comando mkdir, que almacenará los repositorios que vayamos creando.  
 Así que ahora entramos en dicha carpeta usando el comando cd.  
@@ -130,7 +130,7 @@ A continuación, con la carpeta ya inicializada como repositorio, **crearemos un
 ~$ touch README.md
 ```
 
-## #7 Como crear un commit
+## Como crear un commit
 
 Ahora para editar el nuevo archivo pondremos el comando:  
 
@@ -171,7 +171,7 @@ Con el comando **git commit** haremos una instantánea del trabajo que posterior
 ~$ git commit -m "NombreDelCommit"
 ```
 
-## #8 Subir el repositorio a GitHib
+## Subir el repositorio a GitHib
 
 Después de hacer commit, si probamos a hacer el comando **git status** veremos que nos dice que no hay nada a que hacerle commit.  
 Ahora como lo que queremos es subirlo a GitHub lo que haremos es ir al repositorio que creamos anteriormente desde la página y copiaremos y pegaremos en la línea de comandos los dos últimos comandos, que son:  
