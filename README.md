@@ -1,4 +1,4 @@
-# Como instalar git desde Ubuntu
+# Como instalar Git desde Ubuntu
 
 ## Índice
 
@@ -6,7 +6,7 @@
 - [#1 Creación de una carpeta](#Creación-de-una-carpeta)
 - [#2 Instalación de git](#Instalación-de-git)
 - [#3 Configuración del nombre, el email y el editor](#Configuración-del-nombre,-el-email-y-el-editor)
-- [#4 Poner una clave SSH](##4-Poner-una-clave-SSH)
+- [#4 Poner una clave SSH](#4-Poner-una-clave-SSH)
 - [#5 Como crear un nuevo repositorio en GitHub](#Como-crear-un-nuevo-repositorio-en-GitHub)
 - [#6 Como crear un nuevo repositorio local](#Como-crear-un-nuevo-repositorio-local)
 - [#7 Como crear un commit](#Como-crear-un-commit)
@@ -19,7 +19,7 @@ Cuando creamos un archivo y los modificamos en una carpeta inicializada como rep
 Después de usar este comando, estaremos situados en el "Staging area", que será donde estarán los archivos listos para realizar un commit (una instantánea del proyecto que posteriormente dirá que cambios hubo de una versión a otra). Para pasar a la siguiente estapa del proyecto se usará el comando **git commit** (2).  
 Una vez hecho este comando, estaremos en el "local repo" donde estarán guardadas las versiones del proyecto que estaremos haciendo. Para subir a GitHub lo que haya aquí y pasar al "Remote repo" (la fase remota), se usará el comando **git push** (3).
 
-working directory ===(1)===> staging area ===(2)===> loacal repo ===(3)===> Remote repo  
+working directory ===(1)===> staging area ===(2)===> local repo ===(3)===> Remote repo  
 
 Para saber en que fase estamos, usaremos el comando **git status**.  
 
@@ -80,7 +80,7 @@ Y para ver si se configuró correctamente ejecutaremos el siguiente comando que 
 
 ## Poner una clave SSH
 
-Generaremos una clave ssh con el comando, iniciamos el agente y agregamos la clave privada SSH al ssh-agent:   
+Generaremos una clave SSH con el comando, iniciamos el agente y agregamos la clave privada SSH al ssh-agent:   
 
 ```sh
 ~$ ssh-keygen -t rsa -b 4096 -C "EMailQuePusisteEnGitHub"
@@ -138,7 +138,7 @@ Ahora para editar el nuevo archivo pondremos el comando:
 ~$ sudo nano README.md
 ```
 
-Y se nos abrirá el editor de texto que escogimos, que en este caso es nano. A continuación, pondremos cualquier cosa para que después veamos como se ve. Al ser en Markdown, un titular h1 y un párrafo de html se crean así.  
+Y se nos abrirá el editor de texto que escogimos, que en este caso es *nano*. A continuación, pondremos cualquier cosa para que después veamos como se ve. Al ser en Markdown, un titular h1 y un párrafo de html se crean así.  
 
 ```markdown
 # Prueba de titular h1
@@ -152,7 +152,7 @@ Pondremos el comando:
 ~$ git status
 ```
 
-Y el archivo README.md nos saldrá en rojo y modificado, esto es porqu ahora mismo estamos en el working area y con el comando:  
+Y el archivo README.md nos saldrá en rojo y modificado, esto es porque ahora mismo estamos en el working area y con el comando:  
 
 ```sh
 ~$ git add README.md
@@ -164,7 +164,7 @@ Pasaremos al staging area, también si tenemos varios archivos, podemos poner:
 ~$ git add .
 ```
 
-Este punto que ponemos en lugar del nombre del archivo simboliza a todo los archivos del repositorio. Ahora si ponemos **git status** nos saldrá en verde y modificado, ahora que está así, está listo para hacerle un commit.  
+Este punto que ponemos en lugar del nombre del archivo simboliza a todo los archivos del repositorio. Si ponemos **git status** nos saldrá en verde y modificado, ahora que está así, está listo para hacerle un commit y guardar el estado del proyecto.  
 Con el comando **git commit** haremos una instantánea del trabajo que posteriormente nos servirá para ver las modidicaciones que le hicimos al proyecto en cada momento.  
 
 ```sh
