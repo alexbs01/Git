@@ -16,11 +16,11 @@
 
 ## Explicación de como funciona git
 
-Git funciona con tres fases a nivel local y una fase a nivel remota o de red.  
-Cuando creamos un archivo y los modificamos en una carpeta inicializada como repositorio, estaremos situados en la primera fase, denominada "Working directory". Cualquier archivo que modifiquemos pasará automáticamente a este punto. Para pasar a la siguiente fase del desrrollo tendremos que usar el comando **git add**.   
-Después de usar este comando, estaremos situados en el "Staging area", que será donde estarán los archivos listos para realizar un commit (una instantánea del proyecto que posteriormente dirá que cambios hubo de una versión a otra). Para pasar a la siguiente estapa del proyecto se usará el comando **git commit**. Los commits sirven para guardar puntos del 
+1. Git funciona con tres fases a nivel local y una fase a nivel remota o de red.  
+2. Cuando creamos un archivo y los modificamos en una carpeta inicializada como repositorio, estaremos situados en la primera fase, denominada "Working directory". Cualquier archivo que modifiquemos pasará automáticamente a este punto. Para pasar a la siguiente fase del desrrollo tendremos que usar el comando **git add**.   
+3. Después de usar este comando, estaremos situados en el "Staging area", que será donde estarán los archivos listos para realizar un commit (una instantánea del proyecto que posteriormente dirá que cambios hubo de una versión a otra). Para pasar a la siguiente estapa del proyecto se usará el comando **git commit**. Los commits sirven para guardar puntos del 
 proyecto para volver a ellos en momentos posteriores.    
-Una vez hecho este comando, estaremos en el "local repo" donde estarán guardadas las versiones del proyecto que estaremos haciendo. Para subir a GitHub o a cualquier otro repositorio en remoto como GitLab, se usará el comando **git push**, esto permite tener los proyectos subidos en la nube, con lo que se puede colaborar con más personas.  
+4. Una vez hecho este comando, estaremos en el "local repo" donde estarán guardadas las versiones del proyecto que estaremos haciendo. Para subir a GitHub o a cualquier otro repositorio en remoto como GitLab, se usará el comando **git push**, esto permite tener los proyectos subidos en la nube, con lo que se puede colaborar con más personas.  
 
 ![gitDiagram](img/gitDiagram.png)
 
@@ -43,11 +43,11 @@ cd proyectosGit
 
 ## Instalación de git
 
-Ahora instalaremos git con estos dos comandos.  
+Ahora instalaremos git con estos dos comandos. Estos comandos son para Linux, si es desde Windows habrá que bucar en el navegador, descargar el ejecutable y dejar todo por defecto. Luego la configuración será igual si se abre Git Bash.  
 
 ```sh
 sudo apt update -y
-apt install git -y
+sudo apt install git -y
 ```
 
 A continuación, para comprobar que se instaló correctamente usaremos un comando de git para ver en que version está.  
@@ -67,7 +67,7 @@ git config --global user.email "alex.becerra.suarez01@gmail.com"
 git config --global core.editor "nano"
 ```
 
-En el nombre del editor vale cualquiera, ya sea nano, gedit, vim (Este sólo para expertos o si sabes salir de él)...  
+En el nombre del editor vale cualquiera, ya sea nano (Yo uso este), gedit, vim (Este sólo para expertos o si sabes salir de él)...  
 
 Y para ver si se configuró correctamente ejecutaremos el siguiente comando que mostrará lo que escribimos anteriormente.  
 
@@ -85,7 +85,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 
-Y ahora instalamos el xclip para copiar la clave pública SSH. O bien, podemos abrir el archivo de la clave pública y copiarlo a cañón. Cómo este archivo está en la carpeta .ssh de la carpeta del usuario. **Es muy importante copiar entero el archivo .pub**.  
+Y ahora instalamos el xclip para copiar la clave pública SSH. O bien, podemos abrir el archivo de la clave pública y copiarlo a cañón. Cómo este archivo está en la carpeta .ssh de la carpeta del usuario. **Es muy importante copiar entero el archivo .pub**. Si estamos en Windows lo mejor será usar el segundo método que es el que normalmente utilizo.  
 
 ```sh
 sudo apt instal xclip
