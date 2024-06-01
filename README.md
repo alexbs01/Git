@@ -65,6 +65,7 @@ Una vez tengamos instalado Git procederemos a configurar el nombre, el email y e
 git config --global user.name "alexbs01"
 git config --global user.email "alex.becerra.suarez01@gmail.com"
 git config --global core.editor "nano"
+git config --global init.defaultBranch main
 ```
 
 En el nombre del editor vale cualquiera, ya sea nano (Yo uso este), gedit, vim (Este sólo para expertos o si sabes salir de él)...  
